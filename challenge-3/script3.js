@@ -1,19 +1,26 @@
-const leoName = 'Leo'
-const leoSurname = 'Musvaire     '
-const leoBalance = '-9394'
+// Define variables with sample values
+const leoName = "Leo";
+const leoSurname = "Musvaire";
+const leoBalance = 9394.00;
 
-const sarahName = 'Sarah    '
-const sarahSurname = 'Kleinhans'
-const sarahBalance = '-4582.2'
+const sarahName = "Sarah";
+const sarahSurname = "Kleinhans";
+const sarahBalance = 4582.20;
 
-const divider = '----------------------------------'
+const divider = "----------------------------------";
 
-// Only change below this line
+// Create formatted messages for Leo and Sarah
+const leoMessage = `${leoName} ${leoSurname} (Owed: R ${leoBalance.toFixed(2)})`;
+const sarahMessage = `${sarahName} ${sarahSurname} (Owed: R ${sarahBalance.toFixed(2)})`;
 
-const owed = parseInt('R' + leoBalance + sarahBalance)
-const leo = "{leoName} + {leoSurname} + \"Owed\" + \"R\" + {sarahBalance}"
-const sarah = "{leoName} + {surname} + \"Owed\" + \"R\" + {sarahBalance}"
-const total = "Total amount owed: "
-const result = leo + sarah + divider + divider + total + owed + divider
+// Calculate the total owed amount and create the corresponding message
+const totalOwed = leoBalance + sarahBalance;
+const totalOwedMessage = `Total amount owed: R ${totalOwed.toFixed(2)}`;
 
-console.log(result)
+// Combine the messages and divider for the final result
+const result = `${leoMessage}\n${sarahMessage}\n\n${divider}\n${totalOwedMessage}`;
+
+// Output the result to the console
+console.log(result);
+
+
